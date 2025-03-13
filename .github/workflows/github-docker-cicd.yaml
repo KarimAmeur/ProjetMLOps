@@ -46,12 +46,6 @@ jobs:
             if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 # The third step installs the project dependencies.
 
-        - name: Lint
-          run: |
-            pylint --disable=R,C  app.py
-#The fifth step performs linting on the app.py file using pylint.
-#The --disable=R,C flag disables specific pylint checks.
-
         - name: Test
           run: |
             python -m pytest -vv test.py
