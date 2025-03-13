@@ -8,3 +8,4 @@ matplotlib==3.6.2
 joblib==1.2.0
 flask==2.2.2
 pytest==6.2.5
+altair>=4.2.0
