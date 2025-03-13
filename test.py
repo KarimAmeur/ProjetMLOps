@@ -15,7 +15,6 @@ model=lr.logistic_regression(df)
 
 # Nouvelle donnée pour la prédiction
 new_data = pd.DataFrame([{
-    'customer_id' : 43210,
     'credit_lines_outstanding': 5,
     'loan_amt_outstanding': 60000,
     'total_debt_outstanding': 100000,

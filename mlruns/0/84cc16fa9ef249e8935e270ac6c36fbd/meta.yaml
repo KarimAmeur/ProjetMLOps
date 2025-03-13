@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/karimameur/Documents/ProjetMLOps/CodePython/mlruns/0/84cc16fa9ef249e8935e270ac6c36fbd/artifacts
+end_time: 1741896089822
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 84cc16fa9ef249e8935e270ac6c36fbd
+run_name: rare-shrew-452
+run_uuid: 84cc16fa9ef249e8935e270ac6c36fbd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741896087185
+status: 3
+tags: []
+user_id: karimameur
