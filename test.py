@@ -4,7 +4,7 @@ import pandas as pd
 
 # Chemin du fichier de données
 file_path = 'Loan_Data.csv'  # Assurez-vous que le fichier se trouve dans le répertoire de travail
-print("test3!!ç")
+print("test3!!!ç")
     
  # Charger les données dans un DataFrame
 df = id.load_data(file_path)
