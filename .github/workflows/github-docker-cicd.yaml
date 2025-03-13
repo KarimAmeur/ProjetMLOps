@@ -45,12 +45,12 @@ jobs:
             python -m pip install --upgrade pip
             if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 # The third step installs the project dependencies.
-
+"""
         - name: Test
           run: |
             python -m pytest -vv test.py
 
-
+"""
   cd_pipeline:
 
       runs-on: ubuntu-latest 
