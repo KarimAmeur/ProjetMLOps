@@ -6,7 +6,7 @@ import os
 
 if __name__ == "__main__":
     # Chemin du fichier de données
-    file_path = '/Users/karimameur/Documents/ProjetMLOps/Loan_Data.csv'
+    file_path = 'Loan_Data.csv'
     
     # Charger les données dans un DataFrame
     df = id.load_data(file_path)
