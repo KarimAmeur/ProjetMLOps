@@ -46,11 +46,6 @@ jobs:
             if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 # The third step installs the project dependencies.
 
-        - name: Format
-          run: |
-            black app.py
-# The fourth step formats the app.py file using the black code formatter.
-
         - name: Lint
           run: |
             pylint --disable=R,C  app.py
