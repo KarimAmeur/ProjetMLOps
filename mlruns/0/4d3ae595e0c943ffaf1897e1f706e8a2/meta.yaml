@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/karimameur/Documents/ProjetMLOps/CodePython/mlruns/0/4d3ae595e0c943ffaf1897e1f706e8a2/artifacts
+end_time: 1741867804574
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4d3ae595e0c943ffaf1897e1f706e8a2
+run_name: luminous-goose-272
+run_uuid: 4d3ae595e0c943ffaf1897e1f706e8a2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741867802038
+status: 3
+tags: []
+user_id: karimameur
