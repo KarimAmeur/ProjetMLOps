@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/karimameur/Documents/ProjetMLOps/CodePython/mlruns/0/7d4fee4814014ff58e5ce1689da6da92/artifacts
+end_time: 1741859742337
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7d4fee4814014ff58e5ce1689da6da92
+run_name: wise-tern-944
+run_uuid: 7d4fee4814014ff58e5ce1689da6da92
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741859738833
+status: 3
+tags: []
+user_id: karimameur

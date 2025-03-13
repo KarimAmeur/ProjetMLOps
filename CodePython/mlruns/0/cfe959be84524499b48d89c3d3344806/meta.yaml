@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/karimameur/Documents/ProjetMLOps/CodePython/mlruns/0/cfe959be84524499b48d89c3d3344806/artifacts
+end_time: 1741859606022
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: cfe959be84524499b48d89c3d3344806
+run_name: omniscient-foal-31
+run_uuid: cfe959be84524499b48d89c3d3344806
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741859602345
+status: 3
+tags: []
+user_id: karimameur

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/karimameur/Documents/ProjetMLOps/CodePython/mlruns/0/953b01c8a31c4bb2b1fb8767f9b2f4c6/artifacts
+end_time: 1741860607919
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 953b01c8a31c4bb2b1fb8767f9b2f4c6
+run_name: funny-shrew-693
+run_uuid: 953b01c8a31c4bb2b1fb8767f9b2f4c6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741860602542
+status: 3
+tags: []
+user_id: karimameur

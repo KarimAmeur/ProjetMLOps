@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/karimameur/Documents/ProjetMLOps/CodePython/mlruns/0/5a3fc4409bd846b8bdb1dfef5de07414/artifacts
+end_time: 1741859627174
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5a3fc4409bd846b8bdb1dfef5de07414
+run_name: bright-fowl-989
+run_uuid: 5a3fc4409bd846b8bdb1dfef5de07414
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741859623767
+status: 3
+tags: []
+user_id: karimameur

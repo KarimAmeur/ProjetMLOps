@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/karimameur/Documents/ProjetMLOps/CodePython/mlruns/0/faa0818066f642ab82be1b6672c62b01/artifacts
+end_time: 1741860612526
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: faa0818066f642ab82be1b6672c62b01
+run_name: peaceful-snipe-907
+run_uuid: faa0818066f642ab82be1b6672c62b01
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741860607929
+status: 3
+tags: []
+user_id: karimameur

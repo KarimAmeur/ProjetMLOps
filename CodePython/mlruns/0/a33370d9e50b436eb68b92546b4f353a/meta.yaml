@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/karimameur/Documents/ProjetMLOps/CodePython/mlruns/0/a33370d9e50b436eb68b92546b4f353a/artifacts
+end_time: 1741859738825
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a33370d9e50b436eb68b92546b4f353a
+run_name: magnificent-grub-656
+run_uuid: a33370d9e50b436eb68b92546b4f353a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741859735102
+status: 3
+tags: []
+user_id: karimameur
