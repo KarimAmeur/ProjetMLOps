@@ -109,8 +109,10 @@ def plot_confusion_matrix(cm):
 
 # Fonction pour créer un graphique de métriques
 def plot_metrics(metrics):
-    metrics_df = pd.DataFrame(list(metrics.items()), columns=['Métrique', 'Valeur'])
     
+    metrics_df = pd.DataFrame(list(metrics.items()), columns=['Métrique', 'Valeur'])
+    metrics_df['Valeur'] = pd.to_numeric(metrics_df['Valeur'], errors='coerce')
+
     fig, ax = plt.subplots(figsize=(8, 4))
     sns.barplot(x='Métrique', y='Valeur', data=metrics_df, ax=ax)
     plt.ylim(0, 1)
