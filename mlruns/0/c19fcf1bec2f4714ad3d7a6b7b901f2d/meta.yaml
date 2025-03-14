@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/karimameur/Documents/ProjetMLOps/CodePython/mlruns/0/c19fcf1bec2f4714ad3d7a6b7b901f2d/artifacts
+end_time: 1741933538733
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c19fcf1bec2f4714ad3d7a6b7b901f2d
+run_name: rare-sloth-707
+run_uuid: c19fcf1bec2f4714ad3d7a6b7b901f2d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741933536211
+status: 3
+tags: []
+user_id: karimameur

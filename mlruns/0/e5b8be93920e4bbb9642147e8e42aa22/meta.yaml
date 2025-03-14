@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/karimameur/Documents/ProjetMLOps/CodePython/mlruns/0/e5b8be93920e4bbb9642147e8e42aa22/artifacts
+end_time: 1741933028091
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e5b8be93920e4bbb9642147e8e42aa22
+run_name: casual-auk-157
+run_uuid: e5b8be93920e4bbb9642147e8e42aa22
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741933025911
+status: 3
+tags: []
+user_id: karimameur

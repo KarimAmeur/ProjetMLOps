@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/karimameur/Documents/ProjetMLOps/CodePython/mlruns/0/044891c02f0241ef8bf72fa00048504f/artifacts
+end_time: 1741932911672
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 044891c02f0241ef8bf72fa00048504f
+run_name: dapper-steed-854
+run_uuid: 044891c02f0241ef8bf72fa00048504f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741932908914
+status: 3
+tags: []
+user_id: karimameur

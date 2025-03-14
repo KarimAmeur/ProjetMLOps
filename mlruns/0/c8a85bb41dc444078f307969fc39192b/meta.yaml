@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/karimameur/Documents/ProjetMLOps/CodePython/mlruns/0/c8a85bb41dc444078f307969fc39192b/artifacts
+end_time: 1741933075490
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c8a85bb41dc444078f307969fc39192b
+run_name: blushing-lark-719
+run_uuid: c8a85bb41dc444078f307969fc39192b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741933073121
+status: 3
+tags: []
+user_id: karimameur

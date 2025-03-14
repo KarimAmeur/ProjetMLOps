@@ -195,6 +195,8 @@ elif page == "Random Forest":
     """)
 
 # Page 3: Prédiction
+# Page 3: Prédiction
+# Page 3: Prédiction
 else:
     st.title("🔮 Prédiction de défaut de paiement")
     
@@ -212,24 +214,26 @@ else:
     
     model = load_model(model_path)
     
-    # Formulaire de saisie des caractéristiques
+    # Saisie des caractéristiques
     st.header("Saisie des caractéristiques du client")
-    
+
     col1, col2 = st.columns(2)
-    
+
     with col1:
         credit_lines = st.number_input("Nombre de lignes de crédit", min_value=0, value=3)
         loan_amt = st.number_input("Montant du prêt en cours ($)", min_value=0, value=15000)
         total_debt = st.number_input("Dette totale ($)", min_value=0, value=35000)
-    
+
     with col2:
         income = st.number_input("Revenu annuel ($)", min_value=0, value=60000)
         years_employed = st.number_input("Années d'emploi", min_value=0.0, value=5.0)
         fico_score = st.number_input("Score FICO", min_value=300, max_value=850, value=680)
+
+    # Création d'une seule liste de features
+    features = [credit_lines, loan_amt, total_debt, income, years_employed, fico_score]
     
     # Bouton de prédiction
     if st.button("Faire une prédiction"):
-        features = [credit_lines, loan_amt, total_debt, income, years_employed, fico_score]
         prediction, proba = predict(model, features)
         
         st.header("Résultat de la prédiction")
@@ -285,6 +289,7 @@ else:
             Plusieurs facteurs ont contribué à cette prédiction, notamment la combinaison du score FICO, 
             du montant de la dette et des années d'emploi.
             """)
+
 
 # Footer
 st.sidebar.markdown("---")

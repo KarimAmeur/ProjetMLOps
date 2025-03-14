@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/karimameur/Documents/ProjetMLOps/CodePython/mlruns/0/b3b77ef9ec90421f90fc6abd4a97f546/artifacts
+end_time: 1741933540932
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b3b77ef9ec90421f90fc6abd4a97f546
+run_name: crawling-koi-542
+run_uuid: b3b77ef9ec90421f90fc6abd4a97f546
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741933538740
+status: 3
+tags: []
+user_id: karimameur

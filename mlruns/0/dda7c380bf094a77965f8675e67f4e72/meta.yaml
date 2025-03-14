@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/karimameur/Documents/ProjetMLOps/CodePython/mlruns/0/dda7c380bf094a77965f8675e67f4e72/artifacts
+end_time: 1741932914101
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: dda7c380bf094a77965f8675e67f4e72
+run_name: fun-skink-653
+run_uuid: dda7c380bf094a77965f8675e67f4e72
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741932911681
+status: 3
+tags: []
+user_id: karimameur

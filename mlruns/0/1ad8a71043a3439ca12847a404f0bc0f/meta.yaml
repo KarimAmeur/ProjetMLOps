@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/karimameur/Documents/ProjetMLOps/CodePython/mlruns/0/1ad8a71043a3439ca12847a404f0bc0f/artifacts
+end_time: 1741933025905
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1ad8a71043a3439ca12847a404f0bc0f
+run_name: omniscient-worm-655
+run_uuid: 1ad8a71043a3439ca12847a404f0bc0f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741933023420
+status: 3
+tags: []
+user_id: karimameur
