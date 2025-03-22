@@ -1,69 +1,85 @@
 name: Github-Docker Hub MLOps pipeline - Kamila
 
-
 env:
   DOCKER_USER: ${{secrets.DOCKER_USER}}
   DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
   REPO_NAME: ${{secrets.REPO_NAME}}
 
-# Event Triggers:
-# The pipeline is triggered whenever there is a push to the main branch.
-# It is also triggered whenever there is a pull request to the main branch.
-
+# Déclenchement du pipeline :
+# - À chaque push sur la branche "main"
+# - À chaque pull request vers la branche "main"
 on:
   push:
     branches:
-    - main
+      - main
   pull_request:
     branches:
-    - main
+      - main
 
-# this pipeline consists of a two jobs named ci_pipeline
-
+# Définition des jobs CI/CD :
 jobs:
 
-
   ci_pipeline: 
-       runs-on: ubuntu-latest     # The job runs on the ubuntu-latest operating system
-       
-       steps:
-        - uses: actions/checkout@v1 
-          with:
-            fetch-depth: 0
-#The first step uses the actions/checkout@v1 action to clone the repository.
-#The fetch-depth: 0 parameter ensures that the complete commit history is fetched.
+    runs-on: ubuntu-latest  # Utilisation de la dernière version d'Ubuntu pour exécuter le job
+    
+    steps:
+      # Étape 1 : Récupérer le code du dépôt GitHub
+      - uses: actions/checkout@v1 
+        with:
+          fetch-depth: 0  # Récupère tout l'historique des commits
 
-        - name: Set up Python 3.9
-          uses: actions/setup-python@v1
-          with:
-            python-version: 3.9
-#The second step sets up Python 3.9 by using the actions/setup-python@v1 action.
-#The python-version: 3.9 parameter specifies the desired Python version.
+      # Étape 2 : Installer Python 3.9
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.9
 
-        - name: Install dependencies
-          run: |
-            python -m pip install --upgrade pip
-            if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-# The third step installs the project dependencies.
+      # Étape 3 : Installer les dépendances du projet
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip  # Mise à jour de pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi  # Installer les dépendances si le fichier requirements.txt existe
+
+      # Étape 4 : Vérifier le formatage du code avec Black
+      - name: Vérification du formatage avec Black
+        run: |
+          pip install black  # Installer Black
+          black --check .  # Vérifier si le code est bien formaté
+
+      # Étape 5 : Vérifier les erreurs de style avec Flake8
+      - name: Vérification du style de code avec Flake8
+        run: |
+          pip install flake8  # Installer Flake8
+          flake8 .  # Analyser tout le projet et afficher les erreurs de style
+
+      # Étape 6 : Exécuter les tests unitaires avec Pytest
+      - name: Exécution des tests unitaires avec Pytest
+        run: |
+          pip install pytest  # Installer pytest si besoin
+          pytest  # Lancer les tests unitaires
 
   cd_pipeline:
+    runs-on: ubuntu-latest 
+    needs: [ci_pipeline]  # Exécute ce job uniquement si le job ci_pipeline réussit
 
-      runs-on: ubuntu-latest 
-      needs: [ci_pipeline]
- 
-      steps:
-
+    steps:
+      # Étape 1 : Récupérer le code
       - uses: actions/checkout@v2 
+
+      # Étape 2 : Connexion à Docker Hub
       - name: docker login
-        run: | # log into docker hub account
+        run: | 
           docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
   
-      - name: Get current date # get the date of the build
+      # Étape 3 : Récupérer la date actuelle pour taguer l'image Docker
+      - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d--%M-%S')"
 
-      - name: Build the Docker image # push The image to the docker hub
+      # Étape 4 : Construire l'image Docker
+      - name: Build the Docker image
         run: docker build . --file Dockerfile --tag $DOCKER_USER/$REPO_NAME:${{ steps.date.outputs.date }}
 
+      # Étape 5 : Pousser l'image Docker sur Docker Hub
       - name: Docker Push
         run: docker push $DOCKER_USER/$REPO_NAME:${{ steps.date.outputs.date }}
