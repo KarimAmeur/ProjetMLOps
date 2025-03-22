@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/karimameur/Documents/ProjetMLOps/CodePython/mlruns/0/212ad7e7ae8b408399e861053c1691ce/artifacts
+end_time: 1742664296503
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 212ad7e7ae8b408399e861053c1691ce
+run_name: spiffy-sow-315
+run_uuid: 212ad7e7ae8b408399e861053c1691ce
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742664296117
+status: 4
+tags: []
+user_id: Maxime

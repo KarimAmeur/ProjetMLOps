@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/karimameur/Documents/ProjetMLOps/CodePython/mlruns/0/4cfa82d61e4c47598cfe0fec3d816a16/artifacts
+end_time: 1742664077668
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4cfa82d61e4c47598cfe0fec3d816a16
+run_name: clumsy-frog-665
+run_uuid: 4cfa82d61e4c47598cfe0fec3d816a16
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742664077293
+status: 4
+tags: []
+user_id: Maxime
