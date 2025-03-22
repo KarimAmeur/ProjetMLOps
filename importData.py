@@ -1,13 +1,18 @@
 import pandas as pd
 import pyarrow as pa
 
+
 def load_data(file_path):
     # Chemin du fichier
     file_path = file_path
 
     # Lecture du fichier dans un DataFrame
-    df = pd.read_csv(file_path, delimiter=',')  # Utilisez '\t' si les colonnes sont séparées par des tabulations
-    df = df.drop(columns=['customer_id'], errors='ignore')  # Ignore si 'customer_id' n'existe pas
+    df = pd.read_csv(
+        file_path, delimiter=","
+    )  # Utilisez '\t' si les colonnes sont séparées par des tabulations
+    df = df.drop(
+        columns=["customer_id"], errors="ignore"
+    )  # Ignore si 'customer_id' n'existe pas
 
     # Vérification des colonnes présentes dans le DataFrame
     print("Colonnes du DataFrame :")
@@ -18,10 +23,12 @@ def load_data(file_path):
     print(df.dtypes)
 
     # Optionnel : Vérification et conversion de la colonne "Valeur" si elle existe
-    if 'Valeur' in df.columns:
+    if "Valeur" in df.columns:
         print("Types uniques dans la colonne 'Valeur' :")
-        print(df['Valeur'].apply(type).value_counts())
-        df["Valeur"] = pd.to_numeric(df["Valeur"], errors='coerce')  # Convertir en numérique
+        print(df["Valeur"].apply(type).value_counts())
+        df["Valeur"] = pd.to_numeric(
+            df["Valeur"], errors="coerce"
+        )  # Convertir en numérique
     else:
         print("La colonne 'Valeur' n'existe pas dans le DataFrame.")
 
@@ -36,7 +43,8 @@ def load_data(file_path):
 
     return df
 
-file_path = 'Loan_Data.csv'
+
+file_path = "Loan_Data.csv"
 
 # Charger les données dans un DataFrame
 df = load_data(file_path)
