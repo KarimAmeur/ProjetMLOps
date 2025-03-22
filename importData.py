@@ -17,19 +17,6 @@ def load_data(file_path):
     print("Types des colonnes avant conversion :")
     print(df.dtypes)
 
-    # Optionnel : Vérification et conversion de la colonne "Valeur" si elle existe
-    if 'Valeur' in df.columns:
-        print("Types uniques dans la colonne 'Valeur' :")
-        print(df['Valeur'].apply(type).value_counts())
-        df["Valeur"] = pd.to_numeric(df["Valeur"], errors='coerce')  # Convertir en numérique
-    else:
-        print("La colonne 'Valeur' n'existe pas dans le DataFrame.")
-
-    try:
-        table = pa.Table.from_pandas(df)
-        print("Conversion réussie en Arrow Table")
-    except Exception as e:
-        print(f"Erreur lors de la conversion : {e}")
 
     # Affichage des premières lignes du DataFrame pour vérifier
     print(df.head())
