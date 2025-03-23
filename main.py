@@ -1,6 +1,5 @@
 import importData as id
 import logisticRegression as lr
-import pandas as pd
 import subprocess
 import os
 

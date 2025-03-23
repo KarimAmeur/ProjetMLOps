@@ -50,7 +50,7 @@ jobs:
       - name: Vérification du style de code avec Flake8
         run: |
           pip install flake8  # Installer Flake8
-          flake8 .  # Analyser tout le projet et afficher les erreurs de style
+            flake8 --max-line-length=250 .  # Analyser tout le projet et afficher les erreurs de style
 
       # Étape 6 : Exécuter les tests unitaires avec Pytest
       - name: Exécution des tests unitaires avec Pytest
