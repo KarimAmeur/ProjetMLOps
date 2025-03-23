@@ -1,8 +1,7 @@
-import importData as id
+import importData as ida
 import logisticRegression as lr
 import pandas as pd
 import mlflow
-import importData as id
 
 mlflow.set_tracking_uri("http://127.0.0.1:5000")
 
@@ -12,7 +11,7 @@ file_path = "Loan_Data.csv"  # Assurez-vous que le fichier se trouve dans le ré
 print("test3!!!!!!!ç")
 
 # Charger les données dans un DataFrame
-df = id.load_data(file_path)
+df = ida.load_data(file_path)
 print("commit3")
 # Exécuter les modèles
 print("Exécution de la régression logistique...")

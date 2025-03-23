@@ -159,8 +159,8 @@ if page == "Régression Logistique":
     st.header("Informations supplémentaires")
     st.write(
         """
-    Ce modèle de régression logistique a été entraîné pour prédire la probabilité de défaut de paiement 
-    d'un client en fonction de diverses caractéristiques financières. La régression logistique est 
+    Ce modèle de régression logistique a été entraîné pour prédire la probabilité de défaut de paiement
+    d'un client en fonction de diverses caractéristiques financières. La régression logistique est
     particulièrement adaptée pour les problèmes de classification binaire comme celui-ci.
     """
     )
@@ -197,8 +197,8 @@ elif page == "Random Forest":
     st.header("Informations supplémentaires")
     st.write(
         """
-    Le modèle Random Forest est un ensemble de 100 arbres de décision qui ont été entraînés pour 
-    prédire la probabilité de défaut de paiement. Les modèles d'ensemble comme Random Forest sont 
+    Le modèle Random Forest est un ensemble de 100 arbres de décision qui ont été entraînés pour
+    prédire la probabilité de défaut de paiement. Les modèles d'ensemble comme Random Forest sont
     souvent plus robustes et peuvent capturer des relations non linéaires complexes dans les données.
     """
     )
@@ -292,14 +292,14 @@ else:
         if model_type == "Random Forest" and fico_score < 700:
             st.write(
                 """
-            Le score FICO est l'un des facteurs les plus importants dans cette prédiction. 
+            Le score FICO est l'un des facteurs les plus importants dans cette prédiction.
             Un score inférieur à 700 est généralement associé à un risque de défaut plus élevé.
             """
             )
         elif total_debt > income * 0.5:
             st.write(
                 """
-            Le ratio dette/revenu est élevé (plus de 50% du revenu annuel), 
+            Le ratio dette/revenu est élevé (plus de 50% du revenu annuel),
             ce qui est généralement un indicateur de risque de défaut.
             """
             )

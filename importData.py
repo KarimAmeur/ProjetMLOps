@@ -1,5 +1,4 @@
 import pandas as pd
-import pyarrow as pa
 
 
 def load_data(file_path):
