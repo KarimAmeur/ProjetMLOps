@@ -1,6 +1,7 @@
 import pytest
 import pandas as pd
 import importData as ida
+import logisticRegression as lr
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 
@@ -33,16 +34,12 @@ def loan_data():
     return ida.load_data(file_path)
 
 
-# Fixture pour le modèle de régression logistique
+# Fixture pour le modèle de régression logistique - SANS monkeypatch
 @pytest.fixture(scope="module")
-def logistic_model(loan_data, monkeypatch):
+def logistic_model(loan_data):
     """Entraîne et retourne un modèle de régression logistique sans MLflow."""
-    # Option 1: Utiliser une version modifiée sans MLflow
+    # Utiliser directement la fonction de remplacement
     return train_logistic_regression(loan_data)
-
-    # Option 2: Alternativement, vous pourriez patcher la fonction MLflow dans le module
-    # monkeypatch.setattr(lr, "logistic_regression", train_logistic_regression)
-    # return lr.logistic_regression(loan_data)
 
 
 # Fixture pour le modèle Random Forest
@@ -101,8 +98,7 @@ def test_logistic_regression_prediction(logistic_model, test_client_data):
     """Teste les prédictions du modèle de régression logistique."""
     prediction = logistic_model.predict(test_client_data)
     assert prediction is not None
-    # Ce client a des caractéristiques à risque, donc on s'attend à un défaut (1)
-    # Notez: comme nous utilisons un modèle simplifié, nous pouvons simplement vérifier la cohérence
+    # Vérification de base que la prédiction est valide
     assert prediction[0] in [0, 1]
 
 
