@@ -112,8 +112,18 @@ def test_random_forest_prediction(random_forest_model, test_client_data):
 def test_model_prediction_type(logistic_model, test_client_data):
     """Teste le type de sortie des prédictions."""
     prediction = logistic_model.predict(test_client_data)
-    assert isinstance(prediction, (list, pd.Series, tuple, type(pd.array([0]))))
+    # Option 1: Change the assertion to include numpy arrays
+    import numpy as np
 
+    assert isinstance(
+        prediction, (list, pd.Series, tuple, pd.arrays.IntegerArray, np.ndarray)
+    )
+
+    # Option 2: Or convert the prediction to a list or Series before assertion
+    # prediction_list = prediction.tolist()
+    # assert isinstance(prediction_list, list)
+
+    # Check probability predictions
     proba = logistic_model.predict_proba(test_client_data)
     assert (
         proba.shape[1] == 2
