@@ -6,6 +6,11 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import mlflow
+import importData as id
+from logisticRegression import (
+    random_forest,
+)  # Importe la fonction random_forest depuis LogisticRegression.py
+
 
 mlflow.set_tracking_uri("http://127.0.0.1:5000")
 
@@ -42,16 +47,7 @@ prediction = model.predict(new_data)
 assert prediction[0] == 1, "Incorrect prediction"
 print("Test réussi : la prédiction est correcte.")
 
-import importData as id
-from logisticRegression import (
-    random_forest,
-)  # Importe la fonction random_forest depuis LogisticRegression.py
-import pandas as pd
-import unittest
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
-import mlflow
+
 
 mlflow.set_tracking_uri("http://127.0.0.1:5000")
 

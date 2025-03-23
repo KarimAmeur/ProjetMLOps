@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/karimameur/Documents/ProjetMLOps/CodePython/mlruns/0/6bad2d26e107442b9f092281ef67cc42/artifacts
+end_time: 1742713305924
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6bad2d26e107442b9f092281ef67cc42
+run_name: awesome-ape-643
+run_uuid: 6bad2d26e107442b9f092281ef67cc42
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742713303053
+status: 3
+tags: []
+user_id: karimameur

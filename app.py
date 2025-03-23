@@ -1,12 +1,11 @@
 import streamlit as st
-import mlflow
-import mlflow.sklearn
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from PIL import Image
-import io
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
+
 
 # Configuration de la page
 st.set_page_config(
@@ -54,23 +53,30 @@ def load_mlflow_experiments(experiment_type):
         }
 
 
-# Fonction pour charger un modèle MLflow
+
 def load_model(model_path):
     """
-    Charge un modèle MLflow à partir de son chemin
+    Charge un modèle MLflow ou retourne un modèle factice basé sur le chemin du modèle.
+    
+    Args:
+        model_path (str): Le chemin du modèle. Si le chemin contient "logistic_regression",
+                          la fonction charge un modèle de régression logistique, 
+                          sinon un modèle de forêt aléatoire est chargé.
 
-    Dans un environnement réel, utilisez:
-    return mlflow.sklearn.load_model(model_path)
+    Returns:
+        model: Un modèle de scikit-learn (LogisticRegression ou RandomForestClassifier)
+    
+    Raises:
+        ValueError: Si le chemin ne correspond à aucun modèle pris en charge.
     """
-    # Pour la démo, on retourne un modèle factice
+    # Pour la démo, on retourne un modèle factice basé sur le chemin
     if "logistic_regression" in model_path:
-        from sklearn.linear_model import LogisticRegression
-
         return LogisticRegression()
-    else:
-        from sklearn.ensemble import RandomForestClassifier
-
+    elif "random_forest" in model_path:
         return RandomForestClassifier()
+    else:
+        raise ValueError(f"Modèle non reconnu pour le chemin: {model_path}")
+
 
 
 # Fonction pour faire une prédiction
@@ -79,19 +85,9 @@ def predict(model, features):
     # Conversion des valeurs en float
     features_float = [float(val) for val in features]
     # Création d'un DataFrame avec les bonnes colonnes
-    feature_df = pd.DataFrame(
-        [features_float],
-        columns=[
-            "credit_lines_outstanding",
-            "loan_amt_outstanding",
-            "total_debt_outstanding",
-            "income",
-            "years_employed",
-            "fico_score",
-        ],
-    )
+  
 
-    # Dans un environnement réel, utilisez:
+   
     # return model.predict(feature_df)[0], model.predict_proba(feature_df)[0][1]
 
     # Pour la démo, on simule une prédiction basée sur le score FICO
@@ -179,7 +175,6 @@ elif page == "Random Forest":
 
     # Chargement des données MLflow
     rf_data = load_mlflow_experiments("random_forest")
-
     # Affichage des hyperparamètres
     st.header("Hyperparamètres")
     st.write(pd.DataFrame(rf_data["params"].items(), columns=["Paramètre", "Valeur"]))
@@ -217,7 +212,6 @@ elif page == "Random Forest":
 # Page 3: Prédiction
 else:
     st.title("🔮 Prédiction de défaut de paiement")
-
     # Sélection du modèle
     model_type = st.selectbox(
         "Sélectionnez le modèle à utiliser", ["Régression Logistique", "Random Forest"]
@@ -316,7 +310,7 @@ else:
         else:
             st.write(
                 """
-            Plusieurs facteurs ont contribué à cette prédiction, notamment la combinaison du score FICO, 
+            Plusieurs facteurs ont contribué à cette prédiction, notamment la combinaison du score FICO,
             du montant de la dette et des années d'emploi.
             """
             )
@@ -325,6 +319,6 @@ else:
 # Footer
 st.sidebar.markdown("---")
 st.sidebar.info(
-    "Cette application démontre l'utilisation de MLflow pour le suivi et le déploiement "
+    "Cette application démontre l'utilisation de MLflow pour le suivi et le déploiement"
     "de modèles de prédiction de défaut de paiement."
 )

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/karimameur/Documents/ProjetMLOps/CodePython/mlruns/0/b6b2c5b4e701469bb2e7b2c98ec9f1d8/artifacts
+end_time: 1742713308253
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b6b2c5b4e701469bb2e7b2c98ec9f1d8
+run_name: fun-hen-459
+run_uuid: b6b2c5b4e701469bb2e7b2c98ec9f1d8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742713305934
+status: 3
+tags: []
+user_id: karimameur
