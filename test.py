@@ -48,7 +48,6 @@ assert prediction[0] == 1, "Incorrect prediction"
 print("Test réussi : la prédiction est correcte.")
 
 
-
 mlflow.set_tracking_uri("http://127.0.0.1:5000")
 
 # Chemin du fichier de données

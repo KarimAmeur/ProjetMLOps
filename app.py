@@ -53,19 +53,18 @@ def load_mlflow_experiments(experiment_type):
         }
 
 
-
 def load_model(model_path):
     """
     Charge un modèle MLflow ou retourne un modèle factice basé sur le chemin du modèle.
-    
+
     Args:
         model_path (str): Le chemin du modèle. Si le chemin contient "logistic_regression",
-                          la fonction charge un modèle de régression logistique, 
+                          la fonction charge un modèle de régression logistique,
                           sinon un modèle de forêt aléatoire est chargé.
 
     Returns:
         model: Un modèle de scikit-learn (LogisticRegression ou RandomForestClassifier)
-    
+
     Raises:
         ValueError: Si le chemin ne correspond à aucun modèle pris en charge.
     """
@@ -78,16 +77,13 @@ def load_model(model_path):
         raise ValueError(f"Modèle non reconnu pour le chemin: {model_path}")
 
 
-
 # Fonction pour faire une prédiction
 def predict(model, features):
     """Effectue une prédiction avec le modèle choisi"""
     # Conversion des valeurs en float
     features_float = [float(val) for val in features]
     # Création d'un DataFrame avec les bonnes colonnes
-  
 
-   
     # return model.predict(feature_df)[0], model.predict_proba(feature_df)[0][1]
 
     # Pour la démo, on simule une prédiction basée sur le score FICO
