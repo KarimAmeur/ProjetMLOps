@@ -1,16 +1,8 @@
 import importData as id
 import logisticRegression as lr
 import pandas as pd
-import unittest
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
 import mlflow
 import importData as id
-from logisticRegression import (
-    random_forest,
-)  # Importe la fonction random_forest depuis LogisticRegression.py
-
 
 mlflow.set_tracking_uri("http://127.0.0.1:5000")
 
@@ -60,7 +52,7 @@ print("commit3")
 
 # Exécuter le modèle Random Forest
 print("Exécution du modèle Random Forest...")
-model_rf = random_forest(df)  # Appel de la fonction random_forest
+model_rf = lr.random_forest(df)  # Appel de la fonction random_forest
 
 # Nouvelle donnée pour la prédiction
 new_data = pd.DataFrame(
