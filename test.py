@@ -1,7 +1,6 @@
 import pytest
 import pandas as pd
 import importData as ida
-import logisticRegression as lr
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 
