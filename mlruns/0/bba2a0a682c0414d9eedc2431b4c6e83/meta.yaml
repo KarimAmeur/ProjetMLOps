@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/karimameur/Documents/ProjetMLOps/CodePython/mlruns/0/bba2a0a682c0414d9eedc2431b4c6e83/artifacts
+end_time: 1742636743566
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bba2a0a682c0414d9eedc2431b4c6e83
+run_name: treasured-hound-849
+run_uuid: bba2a0a682c0414d9eedc2431b4c6e83
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742636740716
+status: 3
+tags: []
+user_id: karimameur

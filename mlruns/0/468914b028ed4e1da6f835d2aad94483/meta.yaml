@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/karimameur/Documents/ProjetMLOps/CodePython/mlruns/0/468914b028ed4e1da6f835d2aad94483/artifacts
+end_time: 1742636002320
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 468914b028ed4e1da6f835d2aad94483
+run_name: popular-cod-30
+run_uuid: 468914b028ed4e1da6f835d2aad94483
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742635998805
+status: 3
+tags: []
+user_id: karimameur
