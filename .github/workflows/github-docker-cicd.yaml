@@ -56,7 +56,7 @@ jobs:
       - name: Exécution des tests unitaires avec Pytest
         run: |
           pip install pytest  # Installer pytest si besoin
-          pytest  # Lancer les tests unitaires
+          pytest test.py   # Lancer les tests unitaires
 
   cd_pipeline:
     runs-on: ubuntu-latest 
