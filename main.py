@@ -14,7 +14,7 @@ if __name__ == "__main__":
     print("Exécution de la régression logistique...")
     lr.logistic_regression(df)
 
-    print("Exécution du Random Forest...")
+    print("Exécution du Random Forest")
     lr.random_forest(df)
 
     print("Lancement de l'application Streamlit...")
