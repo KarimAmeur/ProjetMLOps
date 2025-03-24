@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
     # Charger les données dans un DataFrame
     df = id.load_data(file_path)
-    print("commit3")
+    print("commit3!")
     # Exécuter les modèles
     print("Exécution de la régression logistique...")
     lr.logistic_regression(df)
